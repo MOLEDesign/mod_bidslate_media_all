@@ -72,6 +72,9 @@ $titlearray = array(
     ),
     2 => array(
         "title" => "Before they were Pros",
+        "episode_title" => "Basketball",
+        "season" => 1,
+        "episode" => 1,
         "type" => 3,
         "type_text" => "SERIES",
         "last_modified" => "2019-04-01",
@@ -85,6 +88,23 @@ $titlearray = array(
         "file_me" => "btwp_me.pdf"
     ),
     3 => array(
+        "title" => "Before they were Pros",
+        "episode_title" => "Basketball",
+        "season" => 1,
+        "episode" => 2,
+        "type" => 3,
+        "type_text" => "SERIES",
+        "last_modified" => "2019-04-01",
+        "status" => 1,
+        "status_text" => "PUBLISHED",
+        "poster_art" => "https://storage.googleapis.com/bidslate_production_bucket/1117_6f6e40f69e439f7aa739b9f5dad378cc.jpg",
+        "file_poster_art" => "btwp_poster.jpg",
+        "file_master" => "btwp_master.mov",
+        "file_trailer" => "btwp_trailer.mov",
+        "file_cc" => "btwp_caption.srt",
+        "file_me" => "btwp_me.pdf"
+    ),
+    4 => array(
         "title" => "Worth",
         "type" => 2,
         "type_text" => "SHORT",
@@ -98,7 +118,7 @@ $titlearray = array(
         "file_cc" => "worth_caption.srt",
         "file_me" => ""
     ),
-    4 => array(
+    5 => array(
         "title" => "Mile Marker",
         "type" => 1,
         "type_text" => "FEATURE",
