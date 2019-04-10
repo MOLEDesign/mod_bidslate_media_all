@@ -54,89 +54,222 @@ defined('_JEXEC') or die;
 
         <div class="uk-panel" data-id="bidslate-content-grid">
 
-            <ul class="uk-list bidslate-content-header">
+            <ul class="uk-list">
                 <li class="uk-accordion-title">
-
-                    <div class="list-portfolio-title">
-                        <?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_TITLE'); ?>
-                    </div>
-                    <div class="list-portfolio-type">
-                        <?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_TYPE'); ?>
-                    </div>
-                    <div class="list-portfolio-date">
-                        <?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_LAST_MODIFIED'); ?>
-                    </div>
-                    <div class="list-portfolio-status">
-                        <?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_STATUS'); ?>
-                    </div>
-
+                    <div class="list-portfolio-title">Title</div>
+                    <div class="list-portfolio-type">Type</div>
+                    <div class="list-portfolio-date">Last Modified</div>
+                    <div class="list-portfolio-status">Status</div>
                 </li>
             </ul>
-            <ul class="uk-list uk-list-divider uk-list-striped content-filter" uk-accordion>
-
-                <?php foreach ($titlearray as $title) { ?>
-
-                    <li data-status="<?php echo $title['status']; ?>" data-type="<?php echo $title['type']; ?>" data-title="<?php echo $title['title']; ?>" data-date="<?php echo $title['last_modified']; ?>">
-                        <a class="uk-accordion-title" href="#">
-                            <div class="list-portfolio-title">
-                                <?php echo $title['title']; ?>
+            <ul class="uk-list uk-list-divider uk-list-striped">
+                <li>
+                    <div class="list-portfolio-title">Show Business</div>
+                    <div class="list-portfolio-type">Feature</div>
+                    <div class="list-portfolio-date">23 March 2019</div>
+                    <div class="list-portfolio-status">14 Items</div>
+                    <div class="uk-accordion-content">
+                        <div class="uk-grid">
+                            <div class="uk-width-1-1">
+                                <h1>Show Business</h1>
+                                <table class="uk-table uk-table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Filename</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>File Viewer</th>
+                                        <th> </th>
+                                        <th> </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>file_001.png</td>
+                                        <td>Poster Art</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-secondary">Edit</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>file_001.mov</td>
+                                        <td>Feature</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-warning">Edit</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>file_001.mov</td>
+                                        <td>Trailer</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-info">Edit</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="list-portfolio-type">
-                                <?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_TYPE_' . $title['type_text']); ?>
-                            </div>
-                            <div class="list-portfolio-date">
-                                <?php echo $title['last_modified']; ?>
-                            </div>
-                            <div class="list-portfolio-status">
-                                <?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_STATUS_' . $title['status_text']); ?>
-                            </div>
-                        </a>
-
-                        <div class="uk-accordion-content">
-                            <div uk-grid>
-                                <div class="uk-width-1-3@m uk-first-column">
-                                    <img class="list-portfolio-image" src="https://storage.googleapis.com/bidslate_production_bucket/4548_0a10f7e836fe704f20e3d286268b1510.jpg" alt=""/>
-                                </div>
-                                <div class="uk-width-2-3@m">
-                                    <h1>
-                                        <?php echo $title->title; ?>
-                                    </h1>
-                                    <table class="uk-table uk-table-striped">
-
-                                        <tbody>
-                                            <?php foreach ($checklistarray as $check) { ?>
-                                                <tr>
-                                                    <td><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_CHECK_' . $check['label']); ?></td>
-                                                    <td><?php echo $title['file_' . $check['name']]; ?></td>
-                                                    <td>
-                                                        <?php if ($title['file_' . $check['name']]) { ?>
-                                                            <button class="uk-button uk-button-danger uk-button-small"><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_BUTTON_REMOVE_FILE'); ?></button>
-                                                        <?php } else { ?>
-                                                            <button class="uk-button uk-button-default uk-button-small"><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_BUTTON_ALLOCATE_FILE'); ?></button>
-                                                        <?php }; ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php if ($title['file_' . $check['name']]) { ?>
-                                                            <span uk-icon="icon: check"></span>
-                                                        <?php } else { ?>
-                                                            <span uk-icon="icon: close"></span>
-                                                        <?php }; ?>
-                                                    </td>
-                                                </tr>
-                                            <?php }; ?>
-                                        </tbody>
-                                    </table>
-
-                                </div>
-                            </div>
-
                         </div>
-                    </li>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-portfolio-title">Worth</div>
+                    <div class="list-portfolio-type">Feature</div>
+                    <div class="list-portfolio-date">23 March 2019</div>
+                    <div class="list-portfolio-status">14 Items</div>
+                    <div class="uk-accordion-content">
+                        <div class="uk-grid">
+                            <div class="uk-width-1-1">
+                                <h1>Worth</h1>
+                                <table class="uk-table uk-table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Filename</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>File Viewer</th>
+                                        <th> </th>
+                                        <th> </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>file_001.png</td>
+                                        <td>Poster Art</td>
+                                        <td>Complete</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-secondary">Edit</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>file_001.mov</td>
+                                        <td>Feature</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-warning">Edit</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>file_001.mov</td>
+                                        <td>Trailer</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-info">Edit</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-portfolio-title">Show Business</div>
+                    <div class="list-portfolio-type">Feature</div>
+                    <div class="list-portfolio-date">23 March 2019</div>
+                    <div class="list-portfolio-status">14 Items</div>
+                    <div class="uk-accordion-content">
+                        <div class="uk-grid">
+                            <div class="uk-width-1-1">
+                                <h1>Family of Fear</h1>
+                                <table class="uk-table uk-table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Filename</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>File Viewer</th>
+                                        <th> </th>
+                                        <th> </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>file_001.png</td>
+                                        <td>Poster Art</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-secondary">Edit</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>file_001.mov</td>
+                                        <td>Feature</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-warning">Edit</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>file_001.mov</td>
+                                        <td>Trailer</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-info">Edit</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                `
+                <li>
+                    <div class="list-portfolio-title">Unallocated Media</div>
+                    <div class="list-portfolio-type"> </div>
+                    <div class="list-portfolio-date"> </div>
+                    <div class="list-portfolio-status">99 Items</div>
+                    <div class="uk-accordion-content">
+                        <div class="uk-grid">
+                            <div class="uk-width-1-1">
+                                <h1>Unallocated</h1>
+                                <table class="uk-table uk-table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Filename</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>File Viewer</th>
+                                        <th> </th>
+                                        <th> </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>file_001.png</td>
+                                        <td>Poster Art</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-secondary">Allocate</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>file_001.mov</td>
+                                        <td>Feature</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-warning">Allocate</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>file_001.mov</td>
+                                        <td>Trailer</td>
+                                        <td>Processing</td>
+                                        <td><a class="uk-button uk-button-default">View</a></td>
+                                        <td><a class="uk-button uk-button-info">Unallocate</a></td>
+                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                `</ul>
 
-                <?php }; ?>
-
-
-            </ul>
         </div>
     </div>
 </div>
