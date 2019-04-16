@@ -41,7 +41,7 @@ $checklistarray = array(
     )
 );
 
-$titlearray = array(
+$titlearrayseller = array(
     0 => array(
         "title" => "Fear of Family",
         "type" => 1,
@@ -49,89 +49,300 @@ $titlearray = array(
         "last_modified" => "2019-02-01",
         "status" => 1,
         "status_text" => "PUBLISHED",
-        "poster_art" => "https://storage.googleapis.com/bidslate_production_bucket/4402_8dc6b24f708a5973d5689f7afbcc4681.jpg",
-        "file_poster_art" => "fear_poster.jpg",
-        "file_master" => "fear_master.mov",
-        "file_trailer" => "fear_trailer.mov",
-        "file_cc" => "fear_caption.srt",
-        "file_me" => "fear_me.pdf"
+        "files_allocated" => array (
+            0 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => "MASTER",
+                "file_name" => "fear_master.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            1 => array(
+                "file_type" => "jpg",
+                "file_group" => 2,
+                "file_allocation" => "POSTER_ART",
+                "file_name" => "fear_poster.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            2 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => "TRAILER",
+                "file_name" => "fear_trailer.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            3 => array(
+                "file_type" => "srt",
+                "file_group" => 3,
+                "file_allocation" => "CLOSE_CAPTION",
+                "file_name" => "fear_caption.srt",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            4 => array(
+                "file_type" => "pdf",
+                "file_group" => 3,
+                "file_allocation" => "M_AND_E",
+                "file_name" => "fear_me.pdf",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            5 => array(
+                "file_type" => "jpg",
+                "file_group" => 2,
+                "file_allocation" => null,
+                "file_name" => "fear_random_graphic.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            )
+        )
     ),
     1 => array(
-        "title" => "Show Business",
+        "title" => "Show Time",
         "type" => 1,
         "type_text" => "FEATURE",
-        "last_modified" => "2019-01-01",
+        "last_modified" => "2019-02-01",
         "status" => 1,
         "status_text" => "PUBLISHED",
-        "poster_art" => "https://storage.googleapis.com/bidslate_production_bucket/4548_0a10f7e836fe704f20e3d286268b1510.jpg",
-        "file_poster_art" => "show_poster.jpg",
-        "file_master" => "show_master.mov",
-        "file_trailer" => "show_trailer.mov",
-        "file_cc" => "show_caption.srt",
-        "file_me" => "show_me.pdf"
+        "files_allocated" => array (
+            0 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => "MASTER",
+                "file_name" => "st_master.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            1 => array(
+                "file_type" => "jpg",
+                "file_group" => 2,
+                "file_allocation" => "POSTER_ART",
+                "file_name" => "st_poster.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            2 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => "TRAILER",
+                "file_name" => "st_trailer.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            3 => array(
+                "file_type" => "srt",
+                "file_group" => 3,
+                "file_allocation" => "CLOSE_CAPTION",
+                "file_name" => "st_caption.srt",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            4 => array(
+                "file_type" => "jpg",
+                "file_group" => 3,
+                "file_allocation" => null,
+                "file_name" => "st_random_graphic.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            )
+        )
     ),
     2 => array(
-        "title" => "Before they were Pros",
-        "episode_title" => "Basketball",
-        "season" => 1,
-        "episode" => 1,
-        "type" => 3,
-        "type_text" => "SERIES",
-        "last_modified" => "2019-04-01",
-        "status" => 1,
-        "status_text" => "PUBLISHED",
-        "poster_art" => "https://storage.googleapis.com/bidslate_production_bucket/1117_6f6e40f69e439f7aa739b9f5dad378cc.jpg",
-        "file_poster_art" => "btwp_poster.jpg",
-        "file_master" => "btwp_master.mov",
-        "file_trailer" => "btwp_trailer.mov",
-        "file_cc" => "btwp_caption.srt",
-        "file_me" => "btwp_me.pdf"
-    ),
-    3 => array(
-        "title" => "Before they were Pros",
-        "episode_title" => "Basketball",
-        "season" => 1,
-        "episode" => 2,
-        "type" => 3,
-        "type_text" => "SERIES",
-        "last_modified" => "2019-04-01",
-        "status" => 1,
-        "status_text" => "PUBLISHED",
-        "poster_art" => "https://storage.googleapis.com/bidslate_production_bucket/1117_6f6e40f69e439f7aa739b9f5dad378cc.jpg",
-        "file_poster_art" => "btwp_poster.jpg",
-        "file_master" => "btwp_master.mov",
-        "file_trailer" => "btwp_trailer.mov",
-        "file_cc" => "btwp_caption.srt",
-        "file_me" => "btwp_me.pdf"
-    ),
-    4 => array(
-        "title" => "Worth",
-        "type" => 2,
-        "type_text" => "SHORT",
-        "last_modified" => "2019-03-10",
-        "status" => 0,
-        "status_text" => "UNPUBLISHED",
-        "poster_art" => "https://storage.googleapis.com/bidslate_production_bucket/4402_8dc6b24f708a5973d5689f7afbcc4681.jpg",
-        "file_poster_art" => "woth_poster.jpg",
-        "file_master" => "",
-        "file_trailer" => "worth_trailer.mov",
-        "file_cc" => "worth_caption.srt",
-        "file_me" => ""
-    ),
-    5 => array(
-        "title" => "Mile Marker",
-        "type" => 1,
-        "type_text" => "FEATURE",
-        "last_modified" => "2018-12-10",
-        "status" => 2,
-        "status_text" => "ARCHIVED",
-        "poster_art" => "https://storage.googleapis.com/bidslate_production_bucket/1014_dfc2222e8ce3a8579a39fddb4c660677.jpg",
-        "file_poster_art" => "mile_poster.jpg",
-        "file_master" => "mile_master.mov",
-        "file_trailer" => "mile_trailer.mov",
-        "file_cc" => "mile_caption.srt",
-        "file_me" => "mile_me.pdf"
+        "title" => "Unallocated",
+        "type" => null,
+        "type_text" => null,
+        "last_modified" => null,
+        "status" => null,
+        "status_text" => null,
+        "files_allocated" => array (
+            0 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => null,
+                "file_name" => "something.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            1 => array(
+                "file_type" => "jpg",
+                "file_group" => 2,
+                "file_allocation" => null,
+                "file_name" => "st_poster.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            2 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => null,
+                "file_name" => "st_trailer.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            3 => array(
+                "file_type" => "srt",
+                "file_group" => 3,
+                "file_allocation" => null,
+                "file_name" => "st_caption.srt",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            ),
+            4 => array(
+                "file_type" => "jpg",
+                "file_group" => 2,
+                "file_allocation" => null,
+                "file_name" => "st_random_graphic.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => null,
+                "file_download" => null
+            )
+        )
     )
 );
 
-require JModuleHelper::getLayoutPath('mod_bidslate_media', $params->get('layout', 'default'));
+
+$titlearraybuyer = array(
+    0 => array(
+        "title" => "Fear of Family",
+        "type" => 1,
+        "type_text" => "FEATURE",
+        "last_modified" => "2019-02-01",
+        "status" => 1,
+        "status_text" => "PUBLISHED",
+        "files_allocated" => array (
+            0 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => "MASTER",
+                "file_name" => "fear_master.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            ),
+            1 => array(
+                "file_type" => "jpg",
+                "file_group" => 2,
+                "file_allocation" => "POSTER_ART",
+                "file_name" => "fear_poster.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            ),
+            2 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => "TRAILER",
+                "file_name" => "fear_trailer.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            ),
+            3 => array(
+                "file_type" => "srt",
+                "file_group" => 3,
+                "file_allocation" => "CLOSE_CAPTION",
+                "file_name" => "fear_caption.srt",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            ),
+            4 => array(
+                "file_type" => "pdf",
+                "file_group" => 3,
+                "file_allocation" => "M_AND_E",
+                "file_name" => "fear_me.pdf",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            ),
+            5 => array(
+                "file_type" => "jpg",
+                "file_group" => 3,
+                "file_allocation" => null,
+                "file_name" => "fear_random_graphic.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            )
+        )
+    ),
+    1 => array(
+        "title" => "Show Time",
+        "type" => 1,
+        "type_text" => "FEATURE",
+        "last_modified" => "2019-02-01",
+        "status" => 1,
+        "status_text" => "PUBLISHED",
+        "files_allocated" => array (
+            0 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => "MASTER",
+                "file_name" => "st_master.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            ),
+            1 => array(
+                "file_type" => "jpg",
+                "file_group" => 2,
+                "file_allocation" => "POSTER_ART",
+                "file_name" => "st_poster.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            ),
+            2 => array(
+                "file_type" => "mov",
+                "file_group" => 1,
+                "file_allocation" => "TRAILER",
+                "file_name" => "st_trailer.mov",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            ),
+            3 => array(
+                "file_type" => "srt",
+                "file_group" => 3,
+                "file_allocation" => "CLOSE_CAPTION",
+                "file_name" => "st_caption.srt",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            ),
+            4 => array(
+                "file_type" => "jpg",
+                "file_group" => 3,
+                "file_allocation" => null,
+                "file_name" => "st_random_graphic.jpg",
+                "file_status" => "PROCESSED",
+                "file_low_rez_download" => "index.php",
+                "file_download" => "index.php"
+            )
+        )
+    )
+);
+
+if ($params->get('layout') === '_:buyer') {
+    require JModuleHelper::getLayoutPath('mod_bidslate_media', $params->get('layout', 'buyer'));
+} else {
+    require JModuleHelper::getLayoutPath('mod_bidslate_media', $params->get('layout', 'default'));
+}

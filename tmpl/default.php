@@ -31,13 +31,13 @@ defined('_JEXEC') or die;
     <div class="uk-width-1-1@m uk-first-column">
         <ul class="uk-nav-center uk-subnav uk-subnav-pill uk-flex-right">
             <li uk-filter-control=""><a href="#"><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_FILTER_ALL'); ?></a></li>
-            <li uk-filter-control="filter: [data-type='1']; group: data-type"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_FILTER_TYPE_FEATURE'); ?></a></li>
-            <li uk-filter-control="filter: [data-type='2']; group: data-type"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_FILTER_TYPE_SHORT'); ?></a></li>
-            <li uk-filter-control="filter: [data-type='3']; group: data-type"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_FILTER_TYPE_SERIES'); ?></a></li>
+            <li uk-filter-control="filter: [data-type='1']; group: data-type"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MEDIA_ALL_FILTER_TYPE_MOVIES'); ?></a></li>
+            <li uk-filter-control="filter: [data-type='2']; group: data-type"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MEDIA_ALL_FILTER_TYPE_GRAPHICS'); ?></a></li>
+            <li uk-filter-control="filter: [data-type='3']; group: data-type"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MEDIA_ALL_FILTER_TYPE_OTHER'); ?></a></li>
 
-            <li uk-filter-control="filter: [data-status='1']; group : data-status"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_FILTER_STATUS_PUBLISHED'); ?></a></li>
-            <li uk-filter-control="filter: [data-status='0']; group : data-status"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_FILTER_STATUS_UNPUBLISHED'); ?></a></li>
-            <li uk-filter-control="filter: [data-status='2']; group : data-status"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MY_MEDIA_FILTER_STATUS_ARCHIVED'); ?></a></li>
+            <li uk-filter-control="filter: [data-status='1']; group : data-status"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MEDIA_ALL_FILTER_STATUS_PUBLISHED'); ?></a></li>
+            <li uk-filter-control="filter: [data-status='0']; group : data-status"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MEDIA_ALL_FILTER_STATUS_UNPUBLISHED'); ?></a></li>
+            <li uk-filter-control="filter: [data-status='2']; group : data-status"><a href="#"><?php echo JText::_('MOD_BIDSLATE_MEDIA_ALL_FILTER_STATUS_ARCHIVED'); ?></a></li>
         </ul>
         <ul class="uk-nav-center uk-subnav uk-subnav-pill uk-flex-right">
 
@@ -50,9 +50,27 @@ defined('_JEXEC') or die;
         </ul>
     </div>
 
-    <div class="uk-width-1-1@m uk-first-column">
+    <ul class="uk-list bidslate-content-header">
+        <li class="uk-accordion-title">
 
-        <div class="uk-panel" data-id="bidslate-content-grid">
+            <div class="list-portfolio-title">
+                <?php echo JText::_('MOD_BIDSLATE_MY_CONTENT_TITLE'); ?>
+            </div>
+            <div class="list-portfolio-type">
+                <?php echo JText::_('MOD_BIDSLATE_MY_CONTENT_TYPE'); ?>
+            </div>
+            <div class="list-portfolio-date">
+                <?php echo JText::_('MOD_BIDSLATE_MY_CONTENT_LAST_MODIFIED'); ?>
+            </div>
+            <div class="list-portfolio-status">
+                <?php echo JText::_('MOD_BIDSLATE_MY_CONTENT_STATUS'); ?>
+            </div>
+
+        </li>
+    </ul>
+    <ul class="uk-list uk-list-divider uk-list-striped content-filter" uk-accordion>
+
+        <?php foreach ($titlearray as $title) { ?>
 
             <ul class="uk-list">
                 <li class="uk-accordion-title">
@@ -165,57 +183,7 @@ defined('_JEXEC') or die;
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="list-portfolio-title">Show Business</div>
-                    <div class="list-portfolio-type">Feature</div>
-                    <div class="list-portfolio-date">23 March 2019</div>
-                    <div class="list-portfolio-status">14 Items</div>
-                    <div class="uk-accordion-content">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-1">
-                                <h1>Family of Fear</h1>
-                                <table class="uk-table uk-table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>Filename</th>
-                                        <th>Type</th>
-                                        <th>Status</th>
-                                        <th>File Viewer</th>
-                                        <th> </th>
-                                        <th> </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>file_001.png</td>
-                                        <td>Poster Art</td>
-                                        <td>Processing</td>
-                                        <td><a class="uk-button uk-button-default">View</a></td>
-                                        <td><a class="uk-button uk-button-secondary">Edit</a></td>
-                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>file_001.mov</td>
-                                        <td>Feature</td>
-                                        <td>Processing</td>
-                                        <td><a class="uk-button uk-button-default">View</a></td>
-                                        <td><a class="uk-button uk-button-warning">Edit</a></td>
-                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>file_001.mov</td>
-                                        <td>Trailer</td>
-                                        <td>Processing</td>
-                                        <td><a class="uk-button uk-button-default">View</a></td>
-                                        <td><a class="uk-button uk-button-info">Edit</a></td>
-                                        <td><a class="uk-button uk-button-danger">Delete</a></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+
                 `
                 <li>
                     <div class="list-portfolio-title">Unallocated Media</div>
@@ -268,8 +236,7 @@ defined('_JEXEC') or die;
                         </div>
                     </div>
                 </li>
-                `</ul>
-
+            </ul>
         </div>
     </div>
 </div>
