@@ -5,7 +5,7 @@
  */
 -->
 <extension type="module" method="upgrade" client="site">
-	<name>MOD_BIDSLATE_MY_MEDIA_ALL</name>
+	<name>MOD_BIDSLATE_MEDIA_ALL_ALL</name>
 	<creationDate>Mar 2019</creationDate>
 	<author>MOLEDesign</author>
 	<authorEmail>support@mole.design</authorEmail>
@@ -13,7 +13,7 @@
 	<copyright>Copyright © 2019 BidSlate- All rights reserved.</copyright>
 	<license>Copyrighted Commercial Software</license>
 	<version>0.1.0</version>
-	<description>MOD_BIDSLATE_MY_MEDIA_ALL_DESCRIPTION</description>
+	<description>MOD_BIDSLATE_MEDIA_ALL_ALL_DESCRIPTION</description>
 	<files>
 		<filename module="mod_bidslate_media_all">mod_bidslate_media_all.php</filename>
 		<filename>mod_bidslate_media_all.xml</filename>
